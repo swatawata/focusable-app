@@ -20,7 +20,7 @@
       }
     ],
     "paths": {
-      "@Import alias must follow the pattern <prefix>/*": ["./src/*"]
+      "@components/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
