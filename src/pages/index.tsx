@@ -1,13 +1,15 @@
+import { FocusableTestCom } from "@components/components/atoms/test";
 import { Packages } from "@components/components/molecules/packages";
-import { useFocusable, FocusContext} from "@noriginmedia/norigin-spatial-navigation";
-import { useEffect } from "react";
+import { init, useFocusable, FocusContext} from "@noriginmedia/norigin-spatial-navigation";
+import { use, useEffect } from "react";
 
 const Home = () => {
-  const { setFocus, focusKey, ref } = useFocusable({ focusKey: "0-0" });
+  init();
+  const { focusSelf, focusKey, ref } = useFocusable();
 
   useEffect(() => {
-    setFocus("0-0");
-  }, [setFocus]);
+    focusSelf();
+  }, [focusSelf]);
 
   return (
     <FocusContext.Provider value={focusKey}>
